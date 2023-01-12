@@ -11,3 +11,36 @@
 @import "critical/critical";
 // ui
 @import "ui/ui";
+.title {
+	z-index: 100;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: auto;
+	font-size: 3rem;
+	background-color: #f1f1f1;
+	color: #000;
+	padding: .4rem 2rem 1rem;
+
+	p {
+		font-size: 2rem;
+	}
+
+	animation-name: anim;
+	animation-timing-function: ease;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-delay: 1s;
+	transform: translateX(100%);
+}
+
+
+@keyframes anim {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}

@@ -11,8 +11,8 @@ void main()	{
 	vec2 newUV = (vUv - vec2(0.5))*resolution.zw + vec2(0.5);
 	vec4 color = texture2D(uTexture, newUV);
 	vec4 offset = texture2D(uDataTexture,vUv);
-	gl_FragColor = vec4(vUv,0.0,1.);
-	gl_FragColor = vec4(offset.r, 0.,0.,1.);
-	gl_FragColor = color;
+	// gl_FragColor = vec4(vUv,0.0,1.);
+	// gl_FragColor = vec4(offset.r, 0.,0.,1.);
+	// gl_FragColor = color;
 	gl_FragColor = texture2D(uTexture, newUV - 0.02*offset.rg);
 }
